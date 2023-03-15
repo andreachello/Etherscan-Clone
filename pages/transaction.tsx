@@ -6,11 +6,7 @@ import { RxQuestionMarkCircled } from 'react-icons/rx';
 import { TfiLightBulb } from 'react-icons/tfi';
 import { useEthereumContext } from '../context/EthereumContext';
 
-interface ITransactionProps {
-}
-
-
-const Transaction: React.FunctionComponent<ITransactionProps> = (props) => {
+const Transaction: React.FunctionComponent = (props) => {
   const { provider } = useEthereumContext()
   const router = useRouter()
   const { query } = router
@@ -67,7 +63,6 @@ const Transaction: React.FunctionComponent<ITransactionProps> = (props) => {
           </div>
           <p>-</p>
         </div>
-
 
         <div className='flex flex-col md:flex-row md:space-x-[20.8rem] border-t pt-4'>
           <div className='text-gray-500 flex space-x-2'>
