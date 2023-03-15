@@ -1,3 +1,4 @@
+import { BigNumber } from 'ethers';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import React,{ useEffect, useState } from 'react';
@@ -10,11 +11,11 @@ interface IBlockProps {
 }
 
 type Block = {
-  _difficulty: number,
+  _difficulty: BigNumber,
   difficulty: number,
   extraData: string,
-  gasLimit: number,
-  gasUsed: number,
+  gasLimit: BigNumber,
+  gasUsed: BigNumber,
   hash: string,
   miner: string,
   nonce: string,
@@ -30,7 +31,7 @@ const Block: React.FunctionComponent<IBlockProps> = (props) => {
   const { query } = router
   const block =  Object.keys(query)[0] // get block from url
 
-  const [blockData, setBlockData] = useState<unknown>()
+  const [blockData, setBlockData] = useState<Block>()
   const [blockError, setBlockError] = useState<unknown>()
   
   const getBlockData = async() => {
