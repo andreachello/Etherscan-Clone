@@ -30,7 +30,7 @@ const Block: React.FunctionComponent<IBlockProps> = (props) => {
   const { query } = router
   const block =  Object.keys(query)[0] // get block from url
 
-  const [blockData, setBlockData] = useState<Block>()
+  const [blockData, setBlockData] = useState<unknown>()
   const [blockError, setBlockError] = useState<unknown>()
   
   const getBlockData = async() => {
