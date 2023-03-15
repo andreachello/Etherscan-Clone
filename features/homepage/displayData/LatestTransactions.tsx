@@ -25,13 +25,13 @@ const LatestTransactions: React.FunctionComponent<ILatestTransactionsProps> = (p
         return (currentTime - blockTime.getTime())/1000
     }
 
-    const getBlockReward = (gasUsed, baseFeePerGas, gasPrice=46) => {
-        const totalFee = ethers.utils.formatEther(
-            ethers.BigNumber.from(gasUsed).mul(gasPrice)
-        )
-        const burnedFee = gasUsed - baseFeePerGas
-        return burnedFee
-    } 
+    // const getBlockReward = (gasUsed, baseFeePerGas, gasPrice=46) => {
+    //     const totalFee = ethers.utils.formatEther(
+    //         ethers.BigNumber.from(gasUsed).mul(gasPrice)
+    //     )
+    //     const burnedFee = gasUsed - baseFeePerGas
+    //     return burnedFee
+    // } 
 
   return (
     <div className='mx-3 lg:mx-16 2xl:mx-72 mt-6 flex flex-col lg:flex-row md:space-x-4 space-y-4 md:space-y-0'>
