@@ -9,27 +9,6 @@ import { useEthereumContext } from '../context/EthereumContext';
 interface ITransactionProps {
 }
 
-type Transaction = {
-    accessList: string,
-    blockHash: string,
-    blockNumber: number,
-    chainId: number,
-    confirmations: number,
-    creates: string,
-    data: string,
-    from: string,
-    gasLimit: number,
-    gasPrice: number,
-    hash: string,
-    nonce: number,
-    r: string,
-    s: string,
-    to: string,
-    transactionIndex: number,
-    type: number,
-    v: number,
-    value: number,
-}
 
 const Transaction: React.FunctionComponent<ITransactionProps> = (props) => {
   const { provider } = useEthereumContext()
@@ -37,7 +16,7 @@ const Transaction: React.FunctionComponent<ITransactionProps> = (props) => {
   const { query } = router
   const transaction =  Object.keys(query)[0] // get transaction from url
 
-  const [transactionData, setTransactionData] = useState<Transaction>()
+  const [transactionData, setTransactionData] = useState<ethers.providers.TransactionResponse>()
   
   const getTransactionData = async() => {
     const response = await provider.getTransaction(transaction)
@@ -124,7 +103,7 @@ const Transaction: React.FunctionComponent<ITransactionProps> = (props) => {
             <RxQuestionMarkCircled className="mt-[3px] text-gray-500 text-center" />
             <p>Gas Price:</p>
           </div>
-          <p>{transactionData && ethers.utils.formatEther(transactionData?.gasPrice)} ETH</p>
+          <p>{transactionData?.gasPrice && ethers.utils.formatEther(transactionData?.gasPrice)} ETH</p>
         </div>
       </div>
       <div className='flex text-xs text-gray-500 py-3 space-x-1'>
