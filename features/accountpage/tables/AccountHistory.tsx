@@ -48,7 +48,11 @@ const AccountHistory: React.FunctionComponent<IAccountHistoryProps> = ({
 
   const isolateFunctionName = (funcName: string) => {
     const regex = /^[^(]+/;
-    return funcName.match(regex)?[0];
+    const matchResult =  funcName.match(regex)
+    if (matchResult !== null) {
+      return matchResult[0];
+    }
+    return "";
   } 
 
   const transactionIn = (to: string) => {
