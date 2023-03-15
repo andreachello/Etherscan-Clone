@@ -25,7 +25,7 @@ const useEtherData = () => {
       setETHSupply(supplyResponse.data.result)
 
       const nodeResponse = await axios.get(`https://api.etherscan.io/api?module=stats&action=nodecount&apikey=${process.env.ETHERSCAN_API_KEY}`)
-      setNodeCount(nodeResponse.data.result)
+      setNodeCount(nodeResponse.data.result.TotalNodeCount)
 
       setIsEtherDataLoading(false)
 

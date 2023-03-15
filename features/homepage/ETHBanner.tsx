@@ -46,7 +46,7 @@ const ETHBanner: React.FunctionComponent = (props) => {
                   </div>
                   <div>
                     <p className='text-gray-400'>TOTAL NODE COUNT</p>
-                    <p>{nodeCount?.TotalNodeCount}</p>
+                    <p>{nodeCount}</p>
                   </div>
                 </div>
   
