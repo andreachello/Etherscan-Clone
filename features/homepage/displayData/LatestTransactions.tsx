@@ -134,7 +134,7 @@ const LatestTransactions: React.FunctionComponent<ILatestTransactionsProps> = (p
                         To 
                         <span className='px-2 text-blue-500'>
                             <Link href={{pathname:"/account/", query: String(transaction.to)}}>
-                                {transaction.to.slice(0,8)}...{transaction.to.slice(32)}
+                                {transaction.to && transaction.to.slice(0,8)}...{transaction.to && transaction.to.slice(32)}
                             </Link>
                         </span>
                     </div>
