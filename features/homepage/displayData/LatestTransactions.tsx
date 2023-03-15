@@ -47,7 +47,7 @@ const LatestTransactions: React.FunctionComponent<ILatestTransactionsProps> = (p
             <div className="table-auto">
             <div>
             {trimmedBlocks?.map((block, i) => (
-                    <div key={i+1} className="py-4 border-b flex flex-row space-x-16 md:space-x-48 lg:space-x-20 xl:space-x-20 2xl:space-x-16">
+                    <div key={i+1} className="py-4 border-b flex flex-row space-x-16 md:space-x-48 lg:space-x-20 xl:space-x-20 2xl:space-x-24">
                         <div>
                             <div className='flex flex-row'>
                                 <div className='p-3 bg-gray-50 rounded'>
@@ -57,7 +57,9 @@ const LatestTransactions: React.FunctionComponent<ILatestTransactionsProps> = (p
                                     <Link href={{pathname: "/block", query: String(block.number)}}>
                                         <span className=' text-blue-500 text-sm'>{block.number}</span>
                                     </Link>
-                                    <p className='text-xs text-gray-400'>{getBlockElapsedTime(block.timestamp)}</p>
+                                    <p className='text-xs text-gray-400'>
+                                        {/* {getBlockElapsedTime(block.timestamp)} */}
+                                    </p>
                                </div>
                             </div>
                         </div>

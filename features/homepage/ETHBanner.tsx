@@ -83,7 +83,11 @@ const ETHBanner: React.FunctionComponent = (props) => {
         <div className='lg:w-1/3 px-4 lg:border-l mt-4 md:mt-4 lg:mt-0 md:border-t lg:border-t-0 md:pt-4 lg:pt-0'>
             <div className='text-xs flex flex-row pb-6'>
               <div>
-               
+               <p className='text-gray-400 uppercase'>Sponsored</p>
+               <div className=' bg-gray-100 border border-gray-400 
+               w-[18rem] md:w-[36rem] lg:w-[17rem] xl:w-[26rem] 2xl:w-[24rem] h-16 mt-2 rounded-lg'>
+               <p className='text-gray-400 uppercase text-center mt-5'>Banner Available</p>
+               </div>
               </div>
             </div>
           </div>

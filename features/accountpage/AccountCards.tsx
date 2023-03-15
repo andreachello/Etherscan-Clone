@@ -68,7 +68,6 @@ const AccountCards: React.FunctionComponent<IAccountCardsProps> = ({
                 <p className='text-sm font-semibold'>Multi Chain</p>
                 <p className='uppercase text-gray-500 text-xs pt-4 pb-1'>Multichain addresses</p>
                 <p></p>
-
             </div>
         </div>
     </div>
