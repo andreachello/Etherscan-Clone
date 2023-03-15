@@ -23,7 +23,8 @@ const AccountCards: React.FunctionComponent<IAccountCardsProps> = ({
             <div className='py-4 border-b flex flex-col lg:flex-row space-y-4 lg:space-y-0 justify-between'>
                 <div className='flex flex-row space-x-3'>
                     <div><Image src={avatar} width={25} height={25} alt="Wallet avatar" className="rounded-full"/></div>
-                    <p><span className='font-bold text-lg'>Address </span> {account}</p>
+                    <p><span className='font-bold text-lg'>Address </span> 
+                    <span className='text-xs md:text-base'>{account}</span></p>
                     <FaRegCopy className='text-gray-400 mt-1'/>
                     <AiOutlineQrcode className='text-gray-400 mt-1'/>
                     <BiMessageDetail className='text-gray-400 mt-1'/>
@@ -32,7 +33,7 @@ const AccountCards: React.FunctionComponent<IAccountCardsProps> = ({
                     <p className='bg-[#0784c3] py-1 px-3 cursor-not-allowed rounded-lg flex'>Buy <IoIosArrowDown className='mt-1 ml-1'/></p>
                     <p className='bg-[#0784c3] py-1 px-3 cursor-not-allowed rounded-lg flex'>Exchange <IoIosArrowDown className='mt-1 ml-1'/></p>
                     <p className='bg-[#0784c3] py-1 px-3 cursor-not-allowed rounded-lg flex'>Earn <IoIosArrowDown className='mt-1 ml-1'/></p>
-                    <p className='bg-[#0784c3] py-1 px-3 cursor-not-allowed rounded-lg flex'>Gaming <IoIosArrowDown className='mt-1 ml-1'/></p>
+                    <p className='bg-[#0784c3] py-1 px-3 cursor-not-allowed rounded-lg hidden md:flex'>Gaming <IoIosArrowDown className='mt-1 ml-1'/></p>
                 </div>
             </div>
             <div className='py-4'>

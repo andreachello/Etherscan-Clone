@@ -5,6 +5,7 @@ import ContentItem from "./ContentItem"
 import HeadContainer from "./HeadContainer"
 import Item from "./Item"
 
+
 interface ITabProps  {
     children?: React.ReactNode,
     currentTab: number,
